@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.page {
+  display: flex;
+}
+.listItemIcon {
+  min-width: 0;
+  justify-content: center;
+  color: #42a5f5;
+}
+.intuit-logo {
+  height: 45px;
+  object-fit: scale-down;
+  margin-right: 20px;
+}
+.svg1 {
+  background-color: red;
+  max-height: 60vh;
+}
+.home-wrapper {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .home-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
