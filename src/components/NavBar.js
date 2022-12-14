@@ -16,7 +16,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { ContactPage, Home, Info, SchoolSharp } from "@mui/icons-material";
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "../assets/intuit-logo-darker.png";
+import logo from "../assets/intuit-logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import { Box } from "@mui/system";
@@ -146,14 +146,14 @@ const NavBar = () => {
       icon: <Info />,
     },
     {
-      text: "Contact us",
-      path: "/contact",
-      icon: <ContactPage />,
-    },
-    {
       text: "Workshops",
       path: "/workshops",
       icon: <SchoolSharp />,
+    },
+    {
+      text: "Contact us",
+      path: "/contact",
+      icon: <ContactPage />,
     },
   ];
   const theme = useTheme();
@@ -184,10 +184,7 @@ const NavBar = () => {
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"
-              sx={{
-                marginRight: 5,
-                ...(open && { display: "none" }),
-              }}
+              sx={{ marginRight: 5, ...(open && { display: "none" }) }}
             >
               <MenuIcon />
             </IconButton>
@@ -200,40 +197,13 @@ const NavBar = () => {
               <img src={logo} alt="" className="intuit-logo" />
             </Box>
 
-            <Box
-              sx={{
-                display: { xs: "none", sm: "flex" },
-                flexGrow: "1",
-                flexDirection: "row",
-                gap: "10px",
-                color: "MenuText",
-              }}
+            <Button
+              onClick={() => navigate("/signup")}
+              sx={{ textTransform: "capitalize" }}
+              variant="text"
             >
-              <Button
-                variant="text"
-                sx={{
-                  textTransform: "unset",
-                }}
-              >
-                Categories
-              </Button>
-              <Button
-                variant="text"
-                sx={{
-                  textTransform: "unset",
-                }}
-              >
-                Life coaching
-              </Button>
-              <Button
-                variant="text"
-                sx={{
-                  textTransform: "unset",
-                }}
-              >
-                Sign up
-              </Button>
-            </Box>
+              Sign up
+            </Button>
 
             <Search>
               <SearchIconWrapper>
@@ -279,7 +249,6 @@ const NavBar = () => {
                   px: 2.5,
                 }}
               >
-                {/*  */}
                 <ListItemIcon
                   sx={{
                     color: [location.pathname === item.path ? "#42a5f5" : null],

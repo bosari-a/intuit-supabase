@@ -1,10 +1,9 @@
 import NavBar from "./NavBar";
-
+import { Box } from "@mui/material";
 const Layout = ({ children }) => {
   return (
-    <div className="page">
+    <div>
       <NavBar />
-
       <div>{children}</div>
     </div>
   );
